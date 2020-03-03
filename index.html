@@ -19,6 +19,7 @@
                 <option value="input">input</option>
             </select>
             <button id="start-project-btn">Start Styling</button>
+            <button id="generate-code-btn">Generate Code</button>
         </div>
 
         <br>
@@ -34,8 +35,11 @@
             <input type="color" name="background-color" class="control-input">
 
             <label for="font-family">Font Family</label>
-            <input type="text" name="font-family" value="Arial" class="control-input">
+            <input type="text" name="font-family" value="'Arial'" class="control-input">
         </form>
+
+        <pre id="cssCodeFace">
+        </pre>
     </main>
 
     <script src="/js/app.js" type="module"></script>

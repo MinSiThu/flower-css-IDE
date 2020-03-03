@@ -31,6 +31,10 @@ class ContentArea{
         return this.editElement;
     }
 
+    setCSS(cssText){
+        this.editElement.style.cssText = cssText;
+    }
+
     putElementToEdit(elementType){
         this.node.innerHTML = "";
         this.node.appendChild(this.setElementToEdit(elementType))
