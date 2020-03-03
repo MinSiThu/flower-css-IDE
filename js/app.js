@@ -40,4 +40,13 @@ function main(){
     })
 }
 
+function accessory(){
+    new ClipboardJS('.btn', {
+        text: function(trigger) {
+            return MainCSSText;
+        }
+    });
+}
+
 main();
+accessory();
