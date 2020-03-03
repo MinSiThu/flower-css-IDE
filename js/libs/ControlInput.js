@@ -15,7 +15,11 @@ class ControlInput{
         let valueJSON = {};
         for (let index = 0; index < this.nodes.length; index++) {
             const input = this.nodes[index];
-            valueJSON[input.name] = input.value;
+            if(input.getAttribute("data-extra-type") == "pixel"){
+                valueJSON[input.name] = input.value+"px";
+            }else{
+                valueJSON[input.name] = input.value;
+            }
         }
         return valueJSON;
     }

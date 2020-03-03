@@ -8,7 +8,7 @@ export function JSONtoCSS(json){
 
 export function cssBeautifer(plainCSS){
     let modifedCSS = `
-        element{
+        #element{
             ${plainCSS}
         }
     `

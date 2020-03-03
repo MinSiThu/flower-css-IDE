@@ -18,6 +18,7 @@
                 <option value="div">div</option>
                 <option value="input">input</option>
             </select>
+            <br>
             <button id="start-project-btn">Start Styling</button>
             <button id="generate-code-btn">Generate Code</button>
         </div>
@@ -28,14 +29,59 @@
         </div>
         <hr>
         <form id="control-form">
-            <label for="color">Color</label>
-            <input type="color" name="color" class="control-input">
+            <h4>Color</h4>
+            <div>
+                <label for="color">Color</label>
+                <input type="color" name="color" class="control-input">
+            </div>
 
-            <label for="background-color">Background Color</label>
-            <input type="color" name="background-color" class="control-input">
+            <div>
+                <label for="background-color">Background Color</label>
+                <input type="color" value="#f0a3d1" name="background-color" class="control-input">
+            </div>
 
-            <label for="font-family">Font Family</label>
-            <input type="text" name="font-family" value="'Arial'" class="control-input">
+            <h4>Spacing</h4>
+            <div>
+                <label for="padding">Padding in pixel</label>
+                <input type="number" name="padding" value="12" class="control-input" data-extra-type="pixel">
+            </div>
+
+            <h4>Font</h4>
+            <div>
+                <label for="font-family">Font Family</label>
+                <input type="text" name="font-family" value="'Arial'" class="control-input">
+            </div>
+
+            <div>
+                <label for="font-size">Font Size in pixel</label>
+                <input type="number" name="font-size" value="12" class="control-input" data-extra-type="pixel">
+            </div>
+
+            <h4>Border</h4>
+            <div>
+                <label for="border-color">Border Color</label>
+                <input type="color" name="border-color" class="control-input">
+            </div>
+
+            <div>
+                <label for="border-width">Border Width in pixel</label>
+                <input type="number" name="border-width" value="1" class="control-input" data-extra-type="pixel">
+            </div>
+
+            <div>
+                <label for="border-color">Border Color</label>
+                <select name="border-style" class="control-input">
+                    <option value="solid">solid</option>
+                    <option value="dotted">dotted</option>
+                    <option value="dashed">dashed</option>
+                    <option value="double">double</option>
+                    <option value="groove">groove</option>
+                    <option value="ridge">ridge</option>
+                    <option value="inset">inset</option>
+                    <option value="hidden">hidden</option>
+                    <option value="none" selected>none</option>
+                </select>
+            </div>
         </form>
 
         <pre id="cssCodeFace">
