@@ -14,7 +14,11 @@
         <div class="row">
             <!-- Column Left-->
             <div class="one-half column" id="fixed-panel">
-                <h1>Flower CSS IDE</h1>
+                <div class="title">
+                    <h1>Flower CSS IDE</h1>
+                    <a href="https://github.com/MinSiThu/flower-css-IDE" target="_blank">Fork on Github</a>
+                </div>
+                
                 <div>
                     <select id="element-select">
                         <option value="button" selected>button</option>
@@ -100,6 +104,17 @@
                     <div>
                         <label for="border-radius">Border Radius in percent</label>
                         <input type="number" name="border-radius" value="1" class="control-input" data-extra-type="percent">
+                    </div>
+
+                    <h4>Text</h4>
+                    <div>
+                        <label for="text-align">Text Align</label>
+                        <select name="text-align" class="control-input">
+                            <option value="left">left</option>
+                            <option value="center" selected>center</option>
+                            <option value="right">right</option>
+                            <option value="justify">justify</option>
+                        </select>
                     </div>
                 </form>
             </div>

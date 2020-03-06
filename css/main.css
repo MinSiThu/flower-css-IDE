@@ -1,8 +1,16 @@
 #css-object{
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 0px!important;
+    border-radius: 0px;
     height: auto;
     padding: auto;
+}
+
+h1{
+    margin-bottom: 0px;
+}
+
+.title{
+    margin-bottom: 15px;
 }
 
 @media (min-width:550px){

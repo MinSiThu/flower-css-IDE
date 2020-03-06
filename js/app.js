@@ -34,7 +34,7 @@ function main(){
         contentArea.setCSS(cssText);
 
         // set All default styles
-        MainCSSText = JSONtoCSS({...styleJSON,...contentArea.getDefaultCSS()});
+        MainCSSText = JSONtoCSS({...styleJSON});
     })
 
     controlInputs.listenChanges((e)=>{
