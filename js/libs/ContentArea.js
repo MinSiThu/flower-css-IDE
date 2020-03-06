@@ -31,6 +31,16 @@ class ContentArea{
         return this.editElement;
     }
 
+    getDefaultCSS(){
+        let style = {};
+        Object.entries(this.editElement.style).forEach(([prop,value])=>{
+            if(this.editElement.style[prop] != "" && Number.isInteger(parseInt(prop)) == false){
+                style[prop] = value;
+            }
+        })
+        return style;
+    }
+
     setCSS(cssText){
         this.editElement.style.cssText = cssText;
     }

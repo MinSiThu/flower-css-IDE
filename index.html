@@ -5,88 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flower CSS IDE</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/3.0.7/marx.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-    <main>
-        <h1>Flower CSS IDE</h1>
-        <div>
-            <select id="element-select">
-                <option value="button" selected>button</option>
-                <option value="div">div</option>
-                <option value="input">input</option>
-            </select>
-            <br>
-            <button id="start-project-btn">Start Styling</button>
-            <button id="generate-code-btn">Generate Code</button>
+    <main class="container">
+        <div class="row">
+            <!-- Column Left-->
+            <div class="one-half column" id="fixed-panel">
+                <h1>Flower CSS IDE</h1>
+                <div>
+                    <select id="element-select">
+                        <option value="button" selected>button</option>
+                        <option value="div">div</option>
+                        <option value="input">input</option>
+                    </select>
+                    <br>
+                    <button id="start-project-btn">Start Styling</button>
+                    <button id="generate-code-btn">Generate Code</button>
+                </div>
+
+                <br>
+                <div id="content-area">
+                
+                </div>
+                <hr>
+
+                <div>
+                    <pre id="cssCodeFace">
+                    </pre>
+                    <button class="btn" data-clipboard-target="#cssCodeFace">Copy to clipboard</button>
+                </div>
+            </div>
+            <!-- Column Left Ends-->
+
+            <!-- Column Right-->
+            <div class="one-half column">
+                <form id="control-form">
+                    <h4>Color</h4>
+                    <div>
+                        <label for="color">Color</label>
+                        <input type="color" name="color" class="control-input">
+                    </div>
+
+                    <div>
+                        <label for="background-color">Background Color</label>
+                        <input type="color" value="#f0a3d1" name="background-color" class="control-input">
+                    </div>
+
+                    <h4>Spacing</h4>
+                    <div>
+                        <label for="padding">Padding in pixel</label>
+                        <input type="number" name="padding" value="12" class="control-input" data-extra-type="pixel">
+                    </div>
+
+                    <h4>Font</h4>
+                    <div>
+                        <label for="font-family">Font Family</label>
+                        <input type="text" name="font-family" value="'Arial'" class="control-input">
+                    </div>
+
+                    <div>
+                        <label for="font-size">Font Size in pixel</label>
+                        <input type="number" name="font-size" value="12" class="control-input" data-extra-type="pixel">
+                    </div>
+
+                    <h4>Border</h4>
+                    <div>
+                        <label for="border-color">Border Color</label>
+                        <input type="color" name="border-color" class="control-input">
+                    </div>
+
+                    <div>
+                        <label for="border-width">Border Width in pixel</label>
+                        <input type="number" name="border-width" value="1" class="control-input" data-extra-type="pixel">
+                    </div>
+
+                    <div>
+                        <label for="border-color">Border Color</label>
+                        <select name="border-style" class="control-input">
+                            <option value="solid">solid</option>
+                            <option value="dotted">dotted</option>
+                            <option value="dashed">dashed</option>
+                            <option value="double">double</option>
+                            <option value="groove">groove</option>
+                            <option value="ridge">ridge</option>
+                            <option value="inset">inset</option>
+                            <option value="hidden">hidden</option>
+                            <option value="none" selected>none</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="border-radius">Border Radius in percent</label>
+                        <input type="number" name="border-radius" value="1" class="control-input" data-extra-type="percent">
+                    </div>
+                </form>
+            </div>
+            <!-- Column Right Ends-->
         </div>
-
-        <br>
-        <div id="content-area">
-        
-        </div>
-        <hr>
-        <form id="control-form">
-            <h4>Color</h4>
-            <div>
-                <label for="color">Color</label>
-                <input type="color" name="color" class="control-input">
-            </div>
-
-            <div>
-                <label for="background-color">Background Color</label>
-                <input type="color" value="#f0a3d1" name="background-color" class="control-input">
-            </div>
-
-            <h4>Spacing</h4>
-            <div>
-                <label for="padding">Padding in pixel</label>
-                <input type="number" name="padding" value="12" class="control-input" data-extra-type="pixel">
-            </div>
-
-            <h4>Font</h4>
-            <div>
-                <label for="font-family">Font Family</label>
-                <input type="text" name="font-family" value="'Arial'" class="control-input">
-            </div>
-
-            <div>
-                <label for="font-size">Font Size in pixel</label>
-                <input type="number" name="font-size" value="12" class="control-input" data-extra-type="pixel">
-            </div>
-
-            <h4>Border</h4>
-            <div>
-                <label for="border-color">Border Color</label>
-                <input type="color" name="border-color" class="control-input">
-            </div>
-
-            <div>
-                <label for="border-width">Border Width in pixel</label>
-                <input type="number" name="border-width" value="1" class="control-input" data-extra-type="pixel">
-            </div>
-
-            <div>
-                <label for="border-color">Border Color</label>
-                <select name="border-style" class="control-input">
-                    <option value="solid">solid</option>
-                    <option value="dotted">dotted</option>
-                    <option value="dashed">dashed</option>
-                    <option value="double">double</option>
-                    <option value="groove">groove</option>
-                    <option value="ridge">ridge</option>
-                    <option value="inset">inset</option>
-                    <option value="hidden">hidden</option>
-                    <option value="none" selected>none</option>
-                </select>
-            </div>
-        </form>
-
-        <pre id="cssCodeFace">
-        </pre>
-        <button class="btn" data-clipboard-target="#cssCodeFace">Copy to clipboard</button>
+        <!-- Row ends-->
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>

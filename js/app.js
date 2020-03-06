@@ -31,8 +31,10 @@ function main(){
     controlForm.listenSubmit(()=>{
         let styleJSON = controlInputs.getAllValuesInJSON();
         let cssText = JSONtoCSS(styleJSON)
-        MainCSSText = cssText;
         contentArea.setCSS(cssText);
+
+        // set All default styles
+        MainCSSText = JSONtoCSS({...styleJSON,...contentArea.getDefaultCSS()});
     })
 
     controlInputs.listenChanges((e)=>{
