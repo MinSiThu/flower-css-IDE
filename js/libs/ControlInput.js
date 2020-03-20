@@ -12,6 +12,7 @@ class ControlInput{
     }
 
     getAllValuesInJSON(){
+        let boxShadow = ``;
         let valueJSON = {};
         for (let index = 0; index < this.nodes.length; index++) {
             const input = this.nodes[index];
@@ -24,6 +25,7 @@ class ControlInput{
                     valueJSON[input.name] = input.value+"%";
                 break;
 
+                
                 default:
                 valueJSON[input.name] = input.value;
                 break;
